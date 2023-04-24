@@ -49,15 +49,17 @@ function Charts(input) {
     // result of filtered data
     let result = samples[0];
 
-    // variables, in decsending order then top 10
+    // variables
     let sample_values = result.sample_values;
     let otu_ids = result.otu_ids;
     let otu_labels = result.otu_labels;
 
+    //decsending order then top 10
     var yticks = otu_ids.slice(0, 10).map(ids => `OTU ${ids}`).reverse();
 
     // trace for bar chart
     let trace_01 = {
+      //decsending order then top 10
       x: sample_values.slice(0, 10).reverse(),
       y: yticks,
       text: otu_labels.slice(0, 10).reverse(),
