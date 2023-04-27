@@ -78,6 +78,7 @@ function Charts(input) {
     var bubbleChart_data = {
       x: otu_ids,
       y: sample_values,
+      text: otu_labels,
       mode: "markers",
       marker: {
         size: sample_values,
